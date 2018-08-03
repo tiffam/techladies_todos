@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 //create schema
 
 const ItemSchema = new Schema({
-    title: {
+    name: {
         type: String,
         required: true
     },
