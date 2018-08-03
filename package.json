@@ -1,0 +1,29 @@
+{
+  "name": "techladies_todos",
+  "version": "1.0.0",
+  "description": "Application for Techladies Bootcamp #4",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffam/techladies_todos.git"
+  },
+  "author": "Alice Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiffam/techladies_todos/issues"
+  },
+  "homepage": "https://github.com/tiffam/techladies_todos#readme"
+}
