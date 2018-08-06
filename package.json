@@ -13,8 +13,11 @@
     "nodemon": "^1.18.3"
   },
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm start server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
