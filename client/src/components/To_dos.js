@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Button, Input, Row, Col } from 'react-materialize';
 
-const to_dos = () => (
-    <div>
-        <h1>Testing from todos</h1>
-    </div>)
+class to_dos extends Component {
+
+    addHandler() {
+        alert("clicked")
+    }
+
+    render() {
+        return (
+            <div >
+                <br />
+                <h5>To Dos</h5>
+                <Input className="input" type="text" />
+                <Button className="button" onClick={this.addHandler}>+</Button>
+            </div>)
+    }
+}
 
 
-export default to_dos;
+    export default to_dos;

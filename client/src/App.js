@@ -14,20 +14,20 @@ class App extends Component {
           <NavItem><h5><Link to="./To_dos">My To Dos</Link></h5></NavItem>
         </Navbar>
         <main>
-        <Route
-          path='/About_me'
-          render={() => (
-            <AboutMe/>
-          )}
-        />
-        <Route
-          path='/To_dos'
-          render={() => (
-            <ToDos/>
-          )}
-        />
-      </main>
-    </div>
+          <Route
+            path='/About_me'
+            render={() => (
+              <AboutMe />
+            )}
+          />
+          <Route
+            path='/To_dos'
+            render={() => (
+              <ToDos />
+            )}
+          />
+        </main>
+      </div>
     );
   }
 }
