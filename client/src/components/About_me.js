@@ -6,11 +6,11 @@ import Card from '../components/Card'
 const about_me = () => (
       <div className="container">
         <img class="responsive-img" src={intro} alt="Creator, Learner, Doer"/>
-          <h4 className="question">Why do I want to join Techladies?</h4>
-          <Card reason="I want to work on a web project that will be useful, with a team of highly-motivated individuals." />
+          <h4 className="question">Reasons for Joining TechLadies:</h4>
+          <Card reason="I want to work with a team of highly-motivated individuals on a web project that will be used by people." />
           <Card reason="I want to get feedback and guidance from people working in web development." />
-          <Card reason="Learn and practice coding." />
-          <Card reason="Gain the skills and confidence in web development to secure a job in the tech industry" />
+          <Card reason="I want to learn and practice coding." />
+          <Card reason="Finally, I want to be a TechLady!" />
       </div>)
 
       
