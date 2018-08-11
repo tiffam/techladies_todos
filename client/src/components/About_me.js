@@ -5,7 +5,7 @@ import Card from '../components/Card'
 
 const about_me = () => (
       <div className="container">
-        <img class="responsive-img" src={intro} alt="Creator, Learner, Doer"/>
+        <img className="responsive-img" src={intro} alt="Creator, Learner, Doer"/>
           <h4 className="question">Reasons for Joining TechLadies:</h4>
           <Card reason="I want to work with a team of highly-motivated individuals on a web project that will be used by people." />
           <Card reason="I want to get feedback and guidance from people working in web development." />
