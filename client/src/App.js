@@ -10,8 +10,10 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar>
-          <NavItem><h5><Link to="./About_me">About Me</Link></h5></NavItem>
-          <NavItem><h5><Link to="./To_dos">My To Dos</Link></h5></NavItem>
+          <NavItem href="./About_me">About Me
+          </NavItem>
+          <NavItem href="./To_dos">My To Dos
+          </NavItem>
         </Navbar>
         <main>
           <Route
