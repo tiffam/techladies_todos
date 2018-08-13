@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Container, Collection, CollectionItem } from 'react-materialize';
+import { Button, Container, Input, Collection, CollectionItem, Row } from 'react-materialize';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { connect } from 'react-redux';
-import { getItems, deleteItem } from '../actions/itemActions';
+import { getItems, updateItem, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
 
 class To_dos extends Component {
@@ -13,6 +13,12 @@ class To_dos extends Component {
 
     onDeleteClick = id => {
         this.props.deleteItem(id);
+
+    }
+
+    onUpdateClick = id => {
+        this.props.updateItem(id);
+        window.location.reload(true);
     }
 
     render() {
@@ -22,20 +28,27 @@ class To_dos extends Component {
             <Container >
                 <Collection className="black">
                     <TransitionGroup className='todos-list'>
-                        {items.map(({ _id, name }) => (
-                            <CSSTransition key={_id} timeout={500} classNames="fade">
+                        {items.map(({ _id, name, date, completed }) => (
+                            <CSSTransition key={_id + completed} timeout={500} classNames="fade">
                                 <CollectionItem className="item">
                                     <Button floating className="button red"
-                                        onClick={this.onDeleteClick.bind(this, _id) }
+                                        onClick={this.onDeleteClick.bind(this, _id)}
                                     > &times;
                                     </Button>
-                                    {name}
+                                    <Button floating className={completed ? "invisible" : "button"}
+                                        onClick={this.onUpdateClick.bind(this, _id)}
+                                    >  &#10003;
+                                    </Button>
+
+                                    <span className="bold title">Item:</span> <span className={completed ? "completed" : "uncompleted"}>{name}</span>
+                                    <span className="date"><span className="bold">Date Added:</span>{date.slice(0, 10)}</span>
                                 </CollectionItem>
                             </CSSTransition>
                         ))}
                     </TransitionGroup>
                 </Collection>
             </Container>
+
         );
     }
 }
@@ -49,4 +62,4 @@ const mapStateToProps = (state) => ({
     item: state.item
 })
 
-export default connect(mapStateToProps, { getItems, deleteItem })(To_dos);
+export default connect(mapStateToProps, { getItems, updateItem, deleteItem })(To_dos);

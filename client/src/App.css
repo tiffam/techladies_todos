@@ -30,7 +30,7 @@ body {
 .button {
   margin: 10px;
 }
-
+/* 
 .fade-enter {
   opacity: 0.01;
 }
@@ -38,7 +38,7 @@ body {
 .fade-enter-active {
   opacity: 1;
   transition: opacity 1000ms ease-in;
-}
+} */
 
 .fade-exit {
   opacity: 1;
@@ -51,4 +51,25 @@ body {
 
 .blackfont {
   color: black;
+}
+
+.bold {
+  font-weight: 800;
+  padding-right: 5px;
+}
+
+.date {
+  float: right;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.notcompleted {
+  text-decoration: none;
+}
+
+.invisible {
+  display: none;
 }

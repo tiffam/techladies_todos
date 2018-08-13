@@ -10,7 +10,6 @@ import uuid from 'uuid';
 
 class ItemModal extends Component {
     state = {
-        // modal: false,
         name: ''
     }
 
@@ -48,7 +47,7 @@ class ItemModal extends Component {
                     <Button
                     color="dark"
                     style={{marginTop: '2rem'}}
-                    block
+                    
                     className="modal-close"
                     >
                         Add Item
